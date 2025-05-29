@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+:root {
+  /* theme-1 */
+  --calc-bg: hsl(222, 26%, 31%);
+  --toggle-keypad-bg: hsl(223, 31%, 20%);
+  --screen-bg: hsl(224, 36%, 15%);
+  --del-reset-bg: hsl(225, 21%, 49%);
+  --del-reset-bg-shadow: hsl(224, 28%, 35%);
+  --del-reset-color: hsl(0, 0%, 100%);
+  --toggle-equal-btn-bg: hsl(6, 63%, 50%);
+  --toggle-equal-btn-shadow: hsl(6, 70%, 34%);
+  --key-bg: hsl(30, 25%, 89%);
+  --key-bg-shadow: hsl(28, 16%, 65%);
+  --key-color: hsl(221, 14%, 31%);
+  --text-color: hsl(0, 0%, 100%);
+}
+
+[data-theme="light"] {
+  --calc-bg: hsl(0, 0%, 90%);
+  --toggle-keypad-bg: hsl(0, 5%, 81%);
+  --screen-bg: hsl(0, 0%, 93%);
+  --del-reset-bg: hsl(185, 42%, 37%);
+  --del-reset-bg-shadow: hsl(185, 58%, 25%);
+  --del-reset-color: hsl(0, 0%, 100%);
+  --toggle-equal-btn-bg: hsl(25, 98%, 40%);
+  --toggle-equal-btn-shadow: hsl(25, 99%, 27%);
+  --key-bg: hsl(45, 7%, 89%);
+  --key-bg-shadow: hsl(35, 11%, 61%);
+  --key-color: hsl(60, 10%, 19%);
+  --text-color: hsl(60, 10%, 19%);
+}
+
+/* Theme 2: Neon/Dark */
+[data-theme="neon"] {
+  --calc-bg: hsl(268, 75%, 9%);
+  --toggle-keypad-bg: hsl(268, 71%, 12%);
+  --screen-bg: hsl(268, 71%, 12%);
+  --del-reset-bg: hsl(281, 89%, 26%);
+  --del-reset-bg-shadow: hsl(285, 91%, 52%);
+  --del-reset-color: hsl(0, 0%, 100%);
+  --toggle-equal-btn-bg: hsl(176, 100%, 44%);
+  --toggle-equal-btn-shadow: hsl(177, 92%, 70%);
+  --key-bg: hsl(268, 47%, 21%);
+  --key-bg-shadow: hsl(290, 70%, 36%);
+  --key-color: hsl(52, 100%, 62%);
+  --text-color: hsl(52, 100%, 62%);
+}
+
+@layer base {
+  body {
+    @apply h-full flex flex-col;
+    color: var(--text-color);
+    font-family: "League Spartan", sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  main {
+    background-color: var(--calc-bg);
+  }
+
+  button {
+    @apply size-[0.7rem] rounded-full mx-1 my-1;
+    background-color: var(--toggle-equal-btn-bg);
+  }
+}
+
+@layer components {
+  .container {
+    @apply flex flex-col gap-[1rem];
+  }
+
+  .toggle-btn {
+    @apply rounded-full;
+    background-color: var(--toggle-keypad-bg);
+  }
+
+  .screen {
+    @apply py-[0.8rem] px-[0.7rem] rounded-md text-right text-[2rem] font-bold;
+    background-color: var(--screen-bg);
+  }
+
+  .number-operator-grid {
+    /* Tailwind classes only */
+    @apply grid grid-cols-4 gap-3 p-4 rounded-md font-semibold text-[2rem];
+    background-color: var(--toggle-keypad-bg);
+  }
+
+  .number-operator-grid * {
+    @apply rounded-md text-center;
+    background-color: var(--key-bg);
+    box-shadow: 0 0.2rem var(--key-bg-shadow);
+    color: var(--key-color);
+  }
+
+  .del-btn,
+  .reset-btn {
+    box-shadow: 0 0.2rem var(--del-reset-bg-shadow);
+  }
+
+  .equal-btn {
+    box-shadow: 0 0.2rem var(--toggle-equal-btn-shadow);
+  }
+}
+
+.caps {
+  text-transform: uppercase;
+}
+
+.attribution {
+  color: var(--toggle-equal-btn-bg);
+  background-color: white;
+  font-size: 11px;
+  text-align: center;
+  padding: 0.5rem 0;
+  width: 100%;
+}
+
+.attribution a {
+  color: inherit;
+}
