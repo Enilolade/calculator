@@ -28,16 +28,15 @@ Users should be able to:
 - See the size of the elements adjust based on their device's screen size
 - Perform mathematical operations like addition, subtraction, multiplication, and division
 - Adjust the color theme based on their preference
-- **Bonus**: Have their initial theme preference checked using `prefers-color-scheme` and have any additional changes saved in the browser
 
 ### Screenshot
 
-![Calculator app screenshot](./screenshot.jpg)
+![Calculator app screenshot](./images/calculator-screenshot.png)
 
 ### Links
 
-- Solution URL: [https://github.com/yourusername/calculator-app](https://github.com/yourusername/calculator-app)
-- Live Site URL: [https://yourusername.github.io/calculator-app](https://yourusername.github.io/calculator-app)
+- Solution URL: [Github Repo](https://github.com/Enilolade/calculator)
+- Live Site URL: [Calculator App](https://github.io/Enilolade/calculator)
 
 ## My process
 
@@ -47,7 +46,6 @@ Users should be able to:
 - Tailwind CSS
 - Mobile-first workflow
 - JavaScript (DOM manipulation)
-- LocalStorage for theme persistence
 
 ### What I learned
 
@@ -66,5 +64,5 @@ I'd like to continue improving my JavaScript logic for evaluating expressions mo
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- GitHub - [@yourusername](https://github.com/yourusername)
+- Frontend Mentor - [@Enilolade](https://www.frontendmentor.io/profile/Enilolade)
+- GitHub - [@Enilolade](https://github.com/Enilolade)
